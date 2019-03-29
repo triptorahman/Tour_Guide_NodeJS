@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+ 
+  padding: 10px;
+}
+</style>
+	<title>All Places</title>
+</head>
+<body>
+	<h1>All Places</h1>
+
+	<a href="/scout">Back</a> |
+	
+	<br>
+	<br>
+	<div id="content">
+
+	<table border="1" width="400px" align="center">
+		
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		
+		
+
+			<tr><td>Place Name</td>
+			<td><%= uList[i].pname %></td></tr>
+			<tr><td>Country</td>
+			<td><%= uList[i].pcountry %></td></tr>
+			<tr><td>Travel Medium</td>
+			<td><%= uList[i].pmedium %></td></tr>
+			<tr><td>Approximately Cost</td>
+			<td><%= uList[i].pcost %></td></tr>
+			<tr><td>Comment</td>
+			<td><%= uList[i].pcomment %></td></tr>
+			<td>Photo</td>
+			<tr>
+			<td><img src='../assets/server/<%= uList[i].pimage %> ' alt='error' width='800' height='400'></td>
+			
+
+			<td>
+				
+				<a href="/scout/deletefinalpost/<%= uList[i].pid %>">Delete</a> 
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</div>
+</body>
+</html>
+	

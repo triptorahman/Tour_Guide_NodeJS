@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+ 
+  padding: 10px;
+}
+</style>
+	<title>Edit post</title>
+</head>
+<body>
+
+<h1>Edit final Post</h1> 
+
+	<a href="/admin">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+<div class="content">
+<form method="post" >
+	<table border="0" width="300px">
+		<tr>
+			<td width="35%">Place Name</td>
+			<td width="2%">:</td>
+			<td><input type="text"  name="placeName" value="<%=pname%>" /></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td>:</td>
+			<td><input type="text"  name="placeCountry" value="<%=pcountry%>" /></td>
+		</tr>
+		<tr>
+			<td>Travel Medium</td>
+			<td>:</td>
+			<td><input type="text"  name="placeMedium" value="<%=pmedium%>"  /></td>
+		</tr>
+		<tr>
+			<td>Cost</td>
+			<td>:</td>
+			<td><input type="text"  name="placeCost" value="<%=pcost%>"  /></td>
+		</tr>
+		<tr>
+			<td>Comment</td>
+			<td>:</td>
+			<td><input type="text"  name="placeComment" value="<%=pcomment%>"  /></td>
+		</tr>
+		<tr>
+			<tr><img src='../assets/server/<%=pimage%> ' alt='error' width='800' height='400'></tr>
+			<td></td>
+			<td></td>
+			<td><input type="submit"  name="update" value="submit" /></td>
+		</tr>
+	</table>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+body {
+  background: #555;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+ 
+  padding: 10px;
+}
+</style>
+	<title>Delete Uploaded Post</title>
+</head>
+<body>
+
+<h1>Delete Uploaded Post</h1> 
+
+	<a href="/admin">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+<div id="content">
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Place Name</td>
+			<td width="2%">:</td>
+			<td><%=pname%></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td>:</td>
+			<td><%=pcountry%></td>
+		</tr>
+		<tr>
+			<td>Travel Medium</td>
+			<td>:</td>
+			<td><%=pmedium%></td>
+		</tr>
+		<tr>
+			<td>Cost</td>
+			<td>:</td>
+			<td><%=pcost%></td>
+		</tr>
+		<tr>
+			<td>Comment</td>
+			<td>:</td>
+			<td><%=pcomment%></td>
+		</tr>
+		<tr>
+			<td>Photo</td>
+			<td>:</td>
+			<td><img src='../assets/server/<%=pimage%> ' alt='error' width='800' height='400'></td>
+		</tr>
+	</table>
+<br>
+<b>Are you sure? this can't be undone if you click confirm!</b>
+
+<form method="post">
+		<input type="hidden" name="pid" value="<%=pid%>">
+		<input type="hidden" name="imagename" value="<%=pimage%>">
+		<input type="submit" name="delete" value="Confirm">
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<style>
+body {
+  background: #D3D3D3;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+ 
+  padding: 10px;
+}
+</style>
+	<title>All post</title>
+</head>
+<body>
+	<h1>Post List</h1>
+
+	<a href="/user">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+<div id="content">
+	<table border="1" width="400px" align="center" >
+		
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		
+		
+
+			<tr><td>Place Name</td>
+			<td><%= uList[i].pname %></td></tr>
+			<tr><td>Country</td>
+			<td><%= uList[i].pcountry %></td></tr>
+			<tr><td>Travel Medium</td>
+			<td><%= uList[i].pmedium %></td></tr>
+			<tr><td>Cost</td>
+			<td><%= uList[i].pcost %></td></tr>
+			<tr><td>Comment</td>
+			<td><%= uList[i].pcomment %></td></tr>
+			<td>Photo</td>
+			<tr>
+			<td><img src='../assets/server/<%= uList[i].pimage %> ' alt='error' width='800' height='400'></td>
+			
+
+			<td>
+				
+				<a href="/user/addinchecklist/<%= uList[i].pid %>">Check</a> | <a href="/user/comment/<%= uList[i].pid %>">Comment</a> 
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</div>
+</body>
+</html>
+	

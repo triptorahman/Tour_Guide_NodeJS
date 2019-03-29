@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wishlist</title>
+</head>
+<body bgcolor="#D3D3D3">
+	<h1>wish List</h1>
+
+	<a href="/user">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="1" width="400px" align="center" >
+		<tr>
+			<th>Place ID</th>
+			<th>Place Name</th>
+			<th>Cost</th>
+			
+			
+			<th>Action</th>
+		</tr>
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].pid %></td>
+			<td><%= uList[i].placename %></td>
+			<td><%= uList[i].placecost %></td>
+			
+			
+			
+			<td>
+				<a href="/user/detailspost/<%= uList[i].pid %>">See Details</a> | <a href="/user/deletedetailspost/<%= uList[i].pid %>">Remove</a>
+				
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
+	

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buy Photo</title>
+</head>
+<body bgcolor="#D3D3D3">
+
+<h1>Add to check list</h1> 
+
+	<a href="/user/checklist">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="0" width="300px" >
+		<tr>
+			<td width="35%">Place Name</td>
+			<td width="2%">:</td>
+			<td><%=pname%></td>
+		</tr>
+		<tr>
+			<td>Country</td>
+			<td>:</td>
+			<td><%=pcountry%></td>
+		</tr>
+		<tr>
+			<td>Travel Medium</td>
+			<td>:</td>
+			<td><%=pmedium%></td>
+		</tr>
+		<tr>
+			<td>Cost</td>
+			<td>:</td>
+			<td><%=pcost%></td>
+		</tr>
+		<tr>
+			<td>Photo</td>
+			<td>:</td>
+			<td><img src='../assets/server/<%=pimage%> ' alt='error' width='800' height='400'></td>
+		</tr>
+	</table>
+
+
+
+
+
+</body>
+</html>

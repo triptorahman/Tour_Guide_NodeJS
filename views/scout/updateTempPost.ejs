@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Pending Post</title>
+</head>
+<body bgcolor="#D3D3D3">
+	<h1>All Pending Post</h1>
+
+	<a href="/scout">Back</a> |
+	<a href="/logout">logout</a> 
+	<br>
+	<br>
+
+	<table border="1" width="400px" align="center" >
+		
+
+		<% for(var i=0; i < uList.length; i++){ %>
+		
+		
+
+			<tr><td><b>Place Name</b>:
+			<%= uList[i].pname %></td></tr>
+			<tr><td><b>Country:</b>
+			<%= uList[i].pcountry %></td></tr>
+			<tr><td><b>Travel Medium</b>
+			<%= uList[i].pmedium %></td></tr>
+			<tr><td><b>Approximately Cost:</b>
+			<%= uList[i].pcost %></td></tr>
+			<td><b>Photo</b></td>
+			<tr>
+			<td><img src='../assets/uploads/<%= uList[i].pimage %> ' alt='error' width='800' height='400'><br/><br/><hr/></td>
+			
+
+			<td>
+				<a href="/scout/edit/<%= uList[i].pid %>">Edit</a> |
+				<a href="/scout/delete/<%= uList[i].pid %>">Delete</a> 
+			</td>
+
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>
+	
